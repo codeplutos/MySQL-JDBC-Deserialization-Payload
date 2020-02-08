@@ -7,13 +7,13 @@
 
 ## 1. 安装rewrite插件
 以下安装方式任选其一
-### 编译插件
+### 【任选】编译插件
 下载mysql-5.7.28源码到/root/mysql-5.7.28，https://launchpadlibrarian.net/451650638/mysql-5.7_5.7.28.orig.tar.gz
 rewrite_example.cc见仓库
 ```shell
    gcc -shared -Wall -fPIC -o /usr/lib/mysql/plugin/rewrite_example.so rewrite_example.cc  -I/root/mysql-5.7.28/include $(mysql_config --cflags) $(mysql_config --libmysqld-libs) -DMYSQL_DYNAMIC_PLUGIN -lmysqlservices
 ```
-### 直接使用本git仓库中的rewrite_example.so
+### 【任选】直接使用本git仓库中的rewrite_example.so
 
 复制rewrite_example.so到/usr/lib/mysql/plugin/rewrite_example.so即可。
 
